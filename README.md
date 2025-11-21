@@ -16,24 +16,30 @@ A modern web application to track and analyze your personal carbon footprint. Bu
 🌐 Live Application
 Frontend (Vercel):https://mern-final-project-ghyslaine95.vercel.app/
 
+
+
 Backend (Render):https://carbon-tracker-backend-r5ll.onrender.com
+
+
+
+
 Pitch deck(canva):https://www.canva.com/design/DAG5VAPXlrA/LZgPBow39NkIIy_sklNvBw/edit?utm_content=DAG5VAPXlrA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 📸 Screenshots
 Homepage and Authentication
-![Login Page](./screenshots/login.png)
+![Login Page](./screenshots/login.PNG)
 
 Main Dashboard
-![Dashboard Page](./screenshots/dashboard.png)
+![Dashboard Page](./screenshots/dashboard.PNG)
 
 Add Emissions
-![Add Emission Interface](./screenshots/addemission.png)
+![Add Emission Interface](./screenshots/addemission.PNG)
 
 Analytics and Charts
-![Analytics Page](./screenshots/analytics.png)
+![Analytics Page](./screenshots/analytics.PNG)
 
 Profile
-![Profile Page](./screenshots/profil.png)
+![Profile Page](./screenshots/profil.PNG)
 
 🛠️ Local Installation
 Prerequisites
