@@ -30,7 +30,7 @@ Homepage and Authentication
 ![Login Page](./screenshots/login.PNG)
 
 Main Dashboard
-![Dashboard Page](./screenshots/dashboard.PNG)
+![Dashboard Page](./screenshots/Dashboard.PNG)
 
 Add Emissions
 ![Add Emission Interface](./screenshots/addemission.PNG)
