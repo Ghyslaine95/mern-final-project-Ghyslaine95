@@ -1,52 +1,178 @@
-# MERN Stack Capstone Project
+🌱 Carbon Tracker - Carbon Footprint Tracking Application
+A modern web application to track and analyze your personal carbon footprint. Built with the MERN stack (MongoDB, Express.js, React, Node.js).
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+🎯 Key Features
+✅ Emission tracking by category (transportation, energy, diet, etc.)
 
-## Assignment Overview
+✅ Interactive dashboards with charts and statistics
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+✅ Secure user authentication
 
-## Getting Started
+✅ Automatic CO2 equivalent calculations
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+✅ Modern responsive interface
 
-## Files Included
+🚀 Live Deployment
+🌐 Live Application
+Frontend (Vercel):https://mern-final-project-ghyslaine95.vercel.app/
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+Backend (Render):https://carbon-tracker-backend-r5ll.onrender.com
+Pitch deck(canva):https://www.canva.com/design/DAG5VAPXlrA/LZgPBow39NkIIy_sklNvBw/edit?utm_content=DAG5VAPXlrA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-## Requirements
+📸 Screenshots
+Homepage and Authentication
+![Login Page](./screenshots/login.png)
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+Main Dashboard
+![Dashboard Page](./screenshots/dashboard.png)
 
-## Project Ideas
+Add Emissions
+![Add Emission Interface](./screenshots/addemission.png)
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+Analytics and Charts
+![Analytics Page](./screenshots/analytics.png)
 
-## Submission
+Profile
+![Profile Page](./screenshots/profil.png)
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+🛠️ Local Installation
+Prerequisites
+Node.js (v18+)
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+MongoDB Atlas or local
 
-## Resources
+npm or yarn
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+Backend Setup
+bash
+# Clone the repository
+git clone https://github.com/Ghyslaine95/mern-final-project.git
+cd backend
+
+# Install dependencies
+npm install
+
+# Environment configuration
+cp .env.example .env
+# Edit .env with your variables
+
+# Start the server
+npm run dev
+Frontend Setup
+bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Environment configuration
+cp .env.example .env
+# Edit .env with your variables
+
+# Start the application
+npm run dev
+Environment Variables
+env
+# Backend (.env)
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRES_IN=30d
+FRONTEND_URL=http://localhost:5173
+
+# Frontend (.env)
+VITE_API_URL=http://localhost:5000/api/v1
+🏗️ Technical Architecture
+Backend (Node.js/Express)
+Framework: Express.js
+
+Database: MongoDB with Mongoose
+
+Authentication: JWT
+
+Security: Helmet, CORS, Rate Limiting
+
+Validation: Express Validator
+
+Frontend (React/Vite)
+Framework: React 18
+
+Build Tool: Vite
+
+Styling: Tailwind CSS
+
+Charts: Chart.js
+
+HTTP Client: Axios
+
+Routing: React Router
+
+📊 Supported Emission Categories
+Category	Activities	Unit
+🚗 Transportation	Car, Bus, Train, Plane	km
+⚡ Energy	Electricity, Gas, Heating Oil	kWh
+🍽️ Diet	Meat, Vegetables, Dairy	kg
+🛍️ Shopping	Electronics, Clothing, Furniture	items
+🗑️ Waste	Plastic, Paper, Food	kg
+🎨 Detailed Features
+🔐 Security
+Secure JWT authentication
+
+Password hashing with bcrypt
+
+Configured CORS protection
+
+Rate limiting to prevent abuse
+
+📈 Analytics
+Real-time charts (Chart.js)
+
+Statistics by period (week, month, year)
+
+Breakdown by category and activity
+
+Historical trends
+
+📱 User Experience
+Responsive interface (mobile-first)
+
+Loading states and user feedback
+
+Comprehensive error handling
+
+Smooth navigation
+
+🤝 Contributing
+Contributions are welcome! To contribute:
+
+Fork the project
+
+Create a feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+👤 Author
+Ghyslaine
+
+GitHub: @Ghyslaine95
+
+Project: Carbon Tracker
+
+🙏 Acknowledgments
+Render for backend hosting
+
+Vercel for frontend hosting
+
+MongoDB Atlas for database
+
+
+
+
+
+
