@@ -26,6 +26,21 @@ import AppError from './utils/AppError.js';
 
 const app = express();
 
+// CORS - FIXED CONFIGURATION (Do this FIRST)
+app.use(cors({
+  origin: [
+    'https://mern-final-project-ghyslaine95.vercel.app',
+    'https://mern-final-project-ghyslaine95-git-main-ghyslaine95.vercel.app',
+    'http://localhost:5173'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'X-Requested-With']
+}));
+
+// Handle preflight requests
+app.options('*', cors());
+
 // Security middleware
 app.use(helmet());
 
@@ -40,14 +55,20 @@ app.use('/api', limiter);
 // Body parser middleware
 app.use(express.json({ limit: '10kb' }));
 
-// CORS - Updated for production
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://mern-final-project-ghyslaine95.vercel.app/',
-  credentials: true
-}));
+// Data sanitization against NoSQL query injection
+app.use(mongoSanitize());
+
+// Data sanitization against XSS
+app.use(xss());
+
+// Prevent parameter pollution
+app.use(hpp());
 
 // Compression
 app.use(compression());
+
+// Cookie parser
+app.use(cookieParser());
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -115,8 +136,7 @@ const connectDB = async () => {
 
 // Connect to database
 connectDB();
-const MONGODB_URI = process.env.MONGODB_URI;
-// À la fin de votre server.js, remplacez cette partie:
+
 const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, '0.0.0.0', () => {
