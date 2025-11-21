@@ -42,7 +42,7 @@ app.use(express.json({ limit: '10kb' }));
 
 // CORS - Updated for production
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: process.env.FRONTEND_URL || 'https://mern-final-project-ghyslaine95.vercel.app/',
   credentials: true
 }));
 
