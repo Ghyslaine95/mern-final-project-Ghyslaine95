@@ -116,12 +116,13 @@ const connectDB = async () => {
 // Connect to database
 connectDB();
 const MONGODB_URI = process.env.MONGODB_URI;
+// À la fin de votre server.js, remplacez cette partie:
 const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
   console.log(`🌐 Frontend URL: ${process.env.FRONTEND_URL}`);
-  console.log(`🔗 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`🔗 Health check: https://carbon-tracker-backend-r5ll.onrender.com/api/health`);
 });
 
 // Handle unhandled promise rejections
